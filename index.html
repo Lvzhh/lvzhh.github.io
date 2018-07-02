@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/05/BBST/">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/UVA-1572-Self-Assembly/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lvzhh">
@@ -312,7 +312,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/BBST/" itemprop="url">BBST</a></h1>
+                <a class="post-title-link" href="/2018/06/UVA-1572-Self-Assembly/" itemprop="url">UVA 1572 Self-Assembly</a></h1>
         
 
         <div class="post-meta">
@@ -324,204 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T16:57:21+08:00">
-                2018-05-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/平衡树/" itemprop="url" rel="index">
-                    <span itemprop="name">平衡树</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/平衡树/splay/" itemprop="url" rel="index">
-                    <span itemprop="name">splay</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/平衡树/treap/" itemprop="url" rel="index">
-                    <span itemprop="name">treap</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据结构/平衡树/AVL/" itemprop="url" rel="index">
-                    <span itemprop="name">AVL</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近学习了一下各种BBST，简单总结一下。</p>
-<p>Splay Tree：区间操作强无敌…对[l,r)区间的操作，把l-1结点splay到树根，r结点splay到根的右结点，则根的右结点的左子树就是区间[l,r)，然后对这棵子树进行操作。一个splay操作的均摊复杂度为O(logn)。</p>
-<p>常见操作：[l,r)区间每个数加a，每个结点维护一个加的数值的lazy_tag</p>
-<p>[l,r)区间翻转，每个结点维护一个表示是否翻转的标记</p>
-<p>在第k个元素后插入元素或区间，若是区间，则要先建成一棵bst，把第k个结点splay到树根，第k+1个结点splay到根的右孩子，把需要插入的子树接到右孩子的左孩子。</p>
-<p>删除元素，得到区间[l,r)后摘除子树。</p>
-<p>实现：刚开始看时还纳闷为什么在实现时都要先加根节点以及根节点的右孩子，然后把整个区间建在根的右孩子的左子树上。后来才想到对于整个区间[1,N+1)，这种做法相当于在开始和结尾各添加一个元素，对整个区间进行操作则需要把这两个结点splay到树根和根的右孩子，才能得到整个区间。在第一个元素前和最后一个元素后插入都需要借助这两个结点。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/BBST/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/05/Link-Cut-Tree/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lvzhh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/timg.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lvzhh's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/Link-Cut-Tree/" itemprop="url">Link Cut Tree</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T10:08:41+08:00">
-                2018-05-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-18T09:55:44+08:00">
+                2018-06-18
               </time>
             
 
@@ -554,19 +358,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/图论/树/" itemprop="url" rel="index">
-                    <span itemprop="name">树</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/图论/树/link-cut-tree/" itemprop="url" rel="index">
-                    <span itemprop="name">link cut tree</span>
+                  <a href="/categories/图论/拓扑排序/" itemprop="url" rel="index">
+                    <span itemprop="name">拓扑排序</span>
                   </a>
                 </span>
 
@@ -603,11 +396,14 @@
 
       
         
-          <p>LCT用来维护<strong>有根树的森林</strong>。对任意结点v，Preferred Child（PC）的定义为：如果v没被访问过或者刚刚访问到v，则PC[v] = null；如果刚刚访问到v的孩子结点u所在的子树，则PC[v] = u。v到其preferred child（如果有）的边为preferred edge，preferred edge连接起来形成preferred path。需要表示的树（也就是直观上的树）称为represented tree。LCT把每一条preferred path维护成一个树，称为Auxiliary Tree，所用的数据结构为Splay Tree。</p>
-<p>树链剖分是Heavy Light Decomposition，把一个结点的孩子分为重和轻，是按照树的结构来进行划分。LCT是Preferred Path Decomposition，是按照对结点的访问来划分的。<br>
+          <p>题意：给n个正方形分子，分子的边在一定条件下可以结合，求这些分子能不能形成无穷大的结构。</p>
+<p>我们从分子的某条边开始铺，假设从下图中的边K+开始铺。K+与K-相结合，再下一步，可以从C-、D+、D+边铺。假设D+与D-相结合后，结合的分子有一条边为K+，那么下一步可以从此K+边开始。问题又回到了起点，按照与之前相同的选择，可以不断重复而组合成无穷大的结构。也就是说，如果从某条边开始，不断地铺，能够到达一条跟它有相同标号的边，那么能够形成无穷大的结构；否则，不能够形成。<br>
+<img src="/2018/06/UVA-1572-Self-Assembly/10.png"></p>
+<p>考虑以图来建模，把标号作为结点，结点的数目最多有26*2个（不考虑00，因为00不可能在有向圈上）。假设正方形的四条边的标号分别为abcd，记dual(a)表示可以和标号a相结合的标号（如K+和K-可以结合），那么dual(a)可以到达b，dual(b)可以到达a…。问题转化为了找有向图中是否存在有向圈，用拓扑排序可以做。</p>
+<p>PS：把dual函数修改了后从50ms到了40ms，rank top 了…<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/Link-Cut-Tree/" rel="contents">
+            <a class="btn" href="/2018/06/UVA-1572-Self-Assembly/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -658,7 +454,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/05/UVA-10820-Send-a-Table/">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/UVA-1599-Ideal-Path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lvzhh">
@@ -677,7 +473,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/UVA-10820-Send-a-Table/" itemprop="url">UVA 10820 Send a Table</a></h1>
+                <a class="post-title-link" href="/2018/06/UVA-1599-Ideal-Path/" itemprop="url">UVA 1599 Ideal Path</a></h1>
         
 
         <div class="post-meta">
@@ -689,8 +485,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-22T21:06:31+08:00">
-                2018-05-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-17T23:45:38+08:00">
+                2018-06-17
               </time>
             
 
@@ -712,8 +508,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
+                  <a href="/categories/搜索/" itemprop="url" rel="index">
+                    <span itemprop="name">搜索</span>
                   </a>
                 </span>
 
@@ -723,8 +519,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/欧拉函数/" itemprop="url" rel="index">
-                    <span itemprop="name">欧拉函数</span>
+                  <a href="/categories/搜索/BFS/" itemprop="url" rel="index">
+                    <span itemprop="name">BFS</span>
                   </a>
                 </span>
 
@@ -761,14 +557,13 @@
 
       
         
-          <p>所有可能的数对数量为N×N<br>
-所求的（x，y）一定满足x，y互素，否则设公约数为t，（x，y）可由（x/t，y/t）得到<br>
-若（x，y）互素，那么（y，x）也互素<br>
-若能求出满足1&lt;=x&lt;=N，1&lt;=y&lt;=x的互素的（x，y），那么经过对称即可得到所有的数对（可从N×N的二维图上来理解）</p>
-<p>求phi值时注意避免溢出<br>
+          <p>题意：给定一个n个顶点m条边的无向图，图中可能有多重边和自环。求顶点1到顶点n最少需要经过的边数，并且输出字典序最小的边的颜色序列。</p>
+<p>从顶点1到顶点n的最少边数可以通过BFS求得，关键是字典序最小的颜色序列。想到的做法是，<strong>从顶点n到顶点1</strong>进行BFS，得到每个顶点与顶点n的距离。之后，想象按照距离把图分层，然后从顶点1开始，每往下走一层，都选择颜色值最小的边。</p>
+<p>若是<strong>从顶点1到顶点n</strong>进行BFS，之后再按照到顶点1的距离分层，在往下一层走时，假设某条边e(u,v)的颜色值最小，我们选择了边e，但是顶点v到顶点n可能需要（比最少边数）更多的边数！</p>
+<p>一个坑：因为图中存在多重边，假设我们从顶点u往下一层走时，选择的最小颜色值与边e(u,v)相同，且有3000条颜色值相同的边e(u,v)，那么结点v要入队（这里使用队列维护）3000次！因此，需要保证入队一次，不然空间和时间都会爆炸<span class="github-emoji" title="smile" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f604.png?v8">😄</span>。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/UVA-10820-Send-a-Table/" rel="contents">
+            <a class="btn" href="/2018/06/UVA-1599-Ideal-Path/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -819,7 +614,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/05/HDU-1402-A-B-Problem-Plus-FFT/">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/UVA-12171-Sculpture/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lvzhh">
@@ -838,7 +633,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/HDU-1402-A-B-Problem-Plus-FFT/" itemprop="url">HDU 1402. A * B Problem Plus(FFT)</a></h1>
+                <a class="post-title-link" href="/2018/06/UVA-12171-Sculpture/" itemprop="url">UVA 12171 Sculpture</a></h1>
         
 
         <div class="post-meta">
@@ -850,8 +645,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-22T21:01:55+08:00">
-                2018-05-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-16T20:03:08+08:00">
+                2018-06-16
               </time>
             
 
@@ -873,8 +668,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
+                  <a href="/categories/搜索/" itemprop="url" rel="index">
+                    <span itemprop="name">搜索</span>
                   </a>
                 </span>
 
@@ -884,8 +679,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/快速傅里叶变换/" itemprop="url" rel="index">
-                    <span itemprop="name">快速傅里叶变换</span>
+                  <a href="/categories/搜索/DFS/" itemprop="url" rel="index">
+                    <span itemprop="name">DFS</span>
                   </a>
                 </span>
 
@@ -922,11 +717,12 @@
 
       
         
-          <p>递归版本的FFT还是好写…<br>
-输出结果时，注意特殊情况0*0=0<br>
+          <p>题意：给定n个长方体，求这些长方体组合成的物体的表面积和体积。想象组合后的几何体完全浸泡在水中，所求的即为几何体与水接触的面积以及所占据的体积。</p>
+<p>可以考虑在坐标系中一个点一个点填充几何体，然后DFS标记出“水区域”。这样，与“水区域”接触的几何体的面积即为所求的表面积，非“水区域”的体积即为所求的体积。因为所给的坐标范围比较大，但n的范围比较小，需要对坐标进行离散化处理。</p>
+<p>离散化的一些细节：若所给区间为<code>[x,y]</code>，<code>S</code>为所有坐标点排序后的数组，考虑下面两种：<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/HDU-1402-A-B-Problem-Plus-FFT/" rel="contents">
+            <a class="btn" href="/2018/06/UVA-12171-Sculpture/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -977,7 +773,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/05/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/UVA-10305-Ordering-Tasks/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lvzhh">
@@ -996,7 +792,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/06/UVA-10305-Ordering-Tasks/" itemprop="url">UVA 10305 Ordering Tasks</a></h1>
         
 
         <div class="post-meta">
@@ -1008,8 +804,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-21T21:13:23+08:00">
-                2018-05-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T22:40:55+08:00">
+                2018-06-14
               </time>
             
 
@@ -1018,6 +814,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/图论/" itemprop="url" rel="index">
+                    <span itemprop="name">图论</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/图论/拓扑排序/" itemprop="url" rel="index">
+                    <span itemprop="name">拓扑排序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1047,13 +876,12 @@
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+          <p>拓扑排序的模板题，主要是来学习一下用DFS来判断是否有环，以及输出拓扑排序的序列。用DFS进行拓扑排序需要借助一个标记<code>c[v]</code>，<code>c[v]=0</code>表示图中的结点未被访问过，<code>c[v]=1</code>表示正在访问结点（及其后继），<code>c[v]=2</code>表示结点访问完成。（当然，也可以设置为其他有相同含义的不同的数值。）</p>
+<p>有向图中存在环，当且仅当访问到一个结点<code>v</code>有<code>c[v]=1</code>。证：设当前正在访问结点<code>u</code>，其直接后继<code>v</code>满足<code>c[v]=1</code>，那么一定存在一条从<code>v</code>到<code>u</code>的路径，又存在有向边<code>(u,v)</code>，则图中存在环。若<code>c[v]!=1</code>，那么不存在从<code>v</code>到<code>u</code>的路径，也就没有环。</p>
+<p>另一种比较熟悉的做法是不断从图中删去入度为0的结点，并把其加入拓扑序列。如果图中剩余的所有结点都不满足入度为0，则说明图中存在环。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/hello-world/" rel="contents">
+            <a class="btn" href="/2018/06/UVA-10305-Ordering-Tasks/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1104,7 +932,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/05/math test/">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/UVA-1103-Ancient-Messages/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lvzhh">
@@ -1123,7 +951,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/math test/" itemprop="url">math test - CF #456(div 2) D-Fishes</a></h1>
+                <a class="post-title-link" href="/2018/06/UVA-1103-Ancient-Messages/" itemprop="url">UVA 1103 Ancient Messages</a></h1>
         
 
         <div class="post-meta">
@@ -1135,8 +963,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T21:13:23+08:00">
-                2018-05-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T17:47:17+08:00">
+                2018-06-14
               </time>
             
 
@@ -1145,6 +973,39 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搜索/" itemprop="url" rel="index">
+                    <span itemprop="name">搜索</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搜索/DFS/" itemprop="url" rel="index">
+                    <span itemprop="name">DFS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1174,17 +1035,827 @@
 
       
         
-          <p>这是个数学题a…<br>
-所有的<span class="math inline">\(r*r\)</span>的scoop的数目为<span class="math inline">\((n-r+1)*(m-r+1)\)</span><br>
-其中包含坐标<span class="math inline">\((x,y)\)</span>的scoop的数目为（坐标index从1开始）<span class="math display">\[f(x,y)=(min(n+1,x+r)-max(x,r))*(min(m+1,y+r)-max(y,r))\]</span></p>
-<p><span class="math inline">\(f(x_0,y)\)</span>在固定x坐标的情况下，<span class="math inline">\(f(x_0,y)\)</span>先增后减，最大值点为<span class="math inline">\(\left \lfloor \frac{m+1}{2} \right \rfloor\)</span></p>
-<p>全局最大值点为<span class="math inline">\((\left \lfloor \frac{n+1}{2} \right \rfloor,\left \lfloor \frac{m+1}{2} \right \rfloor)\)</span></p>
-<p>因此，可以得到的算法为：1.从每一行的最大值点开始，向两边扩展；2.从全局最大值点开始BFS</p>
-<p>题目说精确度1e-9，小数要输出到第9位以后，默认double输出6位导致WA<br>
-代码实现算法1，其中’D’表示decrease，向左边扩展，‘I’表示increase，向右边扩展<br>
+          <p>题意：给定一个黑白图片的16进制表示，识别出图片中包含的象形文字。</p>
+<p>首先需要把十六进制表示转化为二进制表示。因为每个象形文字的黑色像素是连通的，所以黑色像素的连通分量的数目即为象形文字的数目。各象形文字可以用其包含的白色区域的数目来区别。想到的做法是，dfs填充白色像素区域，并返回区域的边界：0 表示没有边界（边界都是白色像素），1,2,3… 表示边界是对应的黑色连通分量，-1 表示边界是整个图像的边界。若边界是黑色像素，则对应的黑色连通分量包含的白色区域数+1。这样，即可区分出不同的象形文字。</p>
+<p>一个想错的地方是，认为返回的区域边界不会为0。想象这样一种情况，一个白色像素其周围的三个白色像素都已经遍历到，则返回0。而这种情况是有可能的。</p>
+<p>紫书中的做法是增加了白色边界，方便处理；从黑色区域找与其相连的白色区域。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/math test/" rel="contents">
+            <a class="btn" href="/2018/06/UVA-1103-Ancient-Messages/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/UVA-297-Quadtrees/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lvzhh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lvzhh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/UVA-297-Quadtrees/" itemprop="url">UVA 297 Quadtrees</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T10:43:04+08:00">
+                2018-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/入门/" itemprop="url" rel="index">
+                    <span itemprop="name">入门</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/入门/模拟/" itemprop="url" rel="index">
+                    <span itemprop="name">模拟</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>题意：给定两个四分树的先序遍历序列，四分树的每个结点与图像的某个区域对应，求两个图像合并后黑色像素的数目。</p>
+<p>想到的做法是同时遍历两个四分树，在遍历的过程中遇到<code>p</code>结点则向下；如果两个结点都不是<code>p</code>结点且其中一个为<code>f</code>结点，则加上对应区域的像素数目。</p>
+<p>紫书中的解法是考虑四分树对应的图像。一个学到的地方是（正方形）区域的表示：区域的左上角坐标<code>(x,y)</code>以及区域的宽度<code>w</code>。这样，在表示四分区域时非常方便。<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/UVA-297-Quadtrees/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/HDU-4027-Can-you-answer-these-queries/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lvzhh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lvzhh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/HDU-4027-Can-you-answer-these-queries/" itemprop="url">HDU 4027 Can you answer these queries?</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T11:54:53+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/线段树/" itemprop="url" rel="index">
+                    <span itemprop="name">线段树</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>题意：给N个数，进行两种操作：1.<code>0 X Y</code>对第X和第Y个数之间的数开根号；2.<code>1 X Y</code>对<br>
+第X和第Y个数之间的数求和。</p>
+<p>开根号操作需要对区间内的每个数进行，才能使得区间的和得到更新。<br>
+没有想到的地方在于，<span class="math inline">\(2^{64}\)</span>恰好需要开7次根号变为1，一个小于<span class="math inline">\(2^{63}\)</span>的数最多开6次根号会变为1（如果最初的数&gt;0)，之后再开根号数值不会变化。</p>
+<p>因此，可以得到的解法是，更新操作更新到叶结点，并记录线段树结点开根号的次数，如果次数&gt;=6，则不再向下更新。也就是说，开始的时候每次更新都会更新到叶结点，复杂度为<span class="math inline">\(O(n)\)</span>，对整个区间更新6次后，复杂度变为<span class="math inline">\(O(logn)\)</span>.interesting…<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/HDU-4027-Can-you-answer-these-queries/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/刷题总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lvzhh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lvzhh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/刷题总结/" itemprop="url">刷题总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T11:33:20+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>POJ 3253 Huffman树<br>
+错误：结果超出了int的范围，应该用long long；而且<code>printf(&quot;%lld&quot;,ans)</code>，注意是<code>lld</code><br>
+POJ 2686 Traveling by Stagecoach（DAG，状压dp）<br>
+题目大意：m个结点的无向图，每个结点表示一个城市，n张票，经过一条边消耗一张票，每张票有一个数值，经过一条边的时间为边的长度/票的数值。给定起点a，问终点b是否可达，若可达，求最短时间。<br>
+用搜索来做，在结点v，有k张票，每条边用k张票去试。<strong>这样可以重新建一张有向图，图中结点表示状态，即所在城市+手中余票，边表示原来边的长度/所用票的数值。问题转化为了从起点到终点的最短路问题。</strong>这个有向图呢，是一个DAG，因此可考虑用dp来求最短路，把票的状态压缩成一个整数T，相当于填一张T*m的表。<br>
+POJ 3734，3233 （dp，矩阵快幂）<br>
+POJ 2932 平面扫描（line sweep）<br>
+POJ 2187 Graham凸包，旋转卡壳求凸多边形直径（最远点对）<br>
+POJ 1741 树的点分治<br>
+POJ 3264 RMQ问题，sparse table or segment tree<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/刷题总结/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/HDU-3974-Assign-the-task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lvzhh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lvzhh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/HDU-3974-Assign-the-task/" itemprop="url">HDU 3974 Assign the task</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T10:16:10+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搜索/" itemprop="url" rel="index">
+                    <span itemprop="name">搜索</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/线段树/" itemprop="url" rel="index">
+                    <span itemprop="name">线段树</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搜索/dfs序/" itemprop="url" rel="index">
+                    <span itemprop="name">dfs序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>dfs序可以把结点v及其子树放在连续的区间中<br>
+分配任务操作<code>T x y</code>相当于把一个连续的区间置为y，可以用线段树来维护<br>
+查询操作为线段树的单点查询<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/HDU-3974-Assign-the-task/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvzhh.github.io/2018/06/HDU-1540-Tunnel-Warfare/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lvzhh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lvzhh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/HDU-1540-Tunnel-Warfare/" itemprop="url">HDU 1540 Tunnel Warfare</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T01:00:25+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构/线段树/" itemprop="url" rel="index">
+                    <span itemprop="name">线段树</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>题意：一个0\1序列，初始为全1，会把某个点从0变1，或从1变为0，求包含x的最长全1序列长度。</p>
+<p>开始想到的解法是：求包含x的最长全1序列长度，那么从x向左找到第一个0的位置，从x向右找到第一个0，这中间的即为所求序列。因此，线段树的每个结点需要维护的信息为<code>mi[k],mx[k]</code>，即最左0和最右0的位置。每次查询时求出[1,x+1)区间中最右的0和[x+1,n+1)区间中最左的0的位置，两者之间元素的数目即为所求长度。<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/HDU-1540-Tunnel-Warfare/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1225,6 +1896,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1272,7 +1947,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1283,7 +1958,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1294,7 +1969,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

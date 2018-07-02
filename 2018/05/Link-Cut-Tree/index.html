@@ -122,7 +122,7 @@
 <meta property="og:description" content="LCT用来维护有根树的森林。对任意结点v，Preferred Child（PC）的定义为：如果v没被访问过或者刚刚访问到v，则PC[v] = null；如果刚刚访问到v的孩子结点u所在的子树，则PC[v] = u。v到其preferred child（如果有）的边为preferred edge，preferred edge连接起来形成preferred path。需要表示的树（也就是直观上的树）称">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://lvzhh.github.io/2018/05/Link-Cut-Tree/0.png">
-<meta property="og:updated_time" content="2018-05-24T09:05:38.344Z">
+<meta property="og:updated_time" content="2018-06-08T07:37:36.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Link Cut Tree">
 <meta name="twitter:description" content="LCT用来维护有根树的森林。对任意结点v，Preferred Child（PC）的定义为：如果v没被访问过或者刚刚访问到v，则PC[v] = null；如果刚刚访问到v的孩子结点u所在的子树，则PC[v] = u。v到其preferred child（如果有）的边为preferred edge，preferred edge连接起来形成preferred path。需要表示的树（也就是直观上的树）称">
@@ -414,7 +414,7 @@
 <p>树链剖分是Heavy Light Decomposition，把一个结点的孩子分为重和轻，是按照树的结构来进行划分。LCT是Preferred Path Decomposition，是按照对结点的访问来划分的。<br>
 <a id="more"></a><br>
 借用MIT 6.851课件的图：<br>
-<img src="0.png"></p>
+<img src="/2018/05/Link-Cut-Tree/0.png"></p>
 <p>LCT的基本操作为access(v),make_root(v),link(v,w),cut(v,w)<br>
 in represented tree world:<br>
 access(v)把从根结点到v的路径变为preferred path<br>
@@ -559,7 +559,7 @@ LCT模板题<br>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -570,7 +570,7 @@ LCT模板题<br>
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -581,7 +581,7 @@ LCT模板题<br>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
